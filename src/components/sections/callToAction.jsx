@@ -13,7 +13,7 @@ const CallToAction = () => {
                             <h2>Müziğinizi Milyonlarca Dinleyiciyle Buluşturmaya Şimdi Başlamak İstemez Misiniz?</h2>
                             <p>XTürkiye olarak 6 Yıl Boyunca 1950’den fazla sanatçımız ile güzel projelere imza attık majör isimlerle organizasyon / konser etkinlikleri yapmaya devam ediyoruz sende şimdi bize katıl müziğini duyurmaya hemen başla</p>
                             <div className="hero-btns">
-                                <Link to="wa.me/905517477767" className="theme-btn call-to-action-button">Hadi Tıkla ve İletişime Geç! <i><RiWhatsappFill size={16}/></i></Link>
+                                <Link to="https://wa.me/905517477767" className="theme-btn call-to-action-button">Hadi Tıkla ve İletişime Geç! <i><RiWhatsappFill size={16}/></i></Link>
                             </div>
                         </div>
                     </div>
