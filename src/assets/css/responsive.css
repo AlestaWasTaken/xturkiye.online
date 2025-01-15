@@ -892,7 +892,7 @@ Version      : 1.0
         max-height: calc(100vh - 100px);
         position: relative;
         bottom: 60px;
-        left: 45px;
+        right: 50px;
     }
 
     .main-menu .navbar-collapse>ul>li:last-child {
