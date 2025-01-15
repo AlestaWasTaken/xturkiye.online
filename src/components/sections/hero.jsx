@@ -19,7 +19,7 @@ const Hero = () => {
                             <h1>Merhaba X Türkiye İle Artık Tüm Müzik İhtiyaçlarınızı Karşılayabilirsiniz</h1>
                             <h2>Ekibimizle doğru bir planlama yapın, müziklerinizi oluşturmanın ve tanıtmanın doğru matematiğini oluşturun ve bu planları gerçeğe dönüştürün.</h2>
                             <div className="hero-btns">
-                                <Link to="https://wa.me/905517477767" className="theme-btn">İletişime Geç <i><RiWhatsappLine size={16}/></i></Link>
+                                <Link to="https://api.whatsapp.com/send?phone=905517477767&text=Merhaba,%20xturkiye.online%20sitenizden%20ulaşıyorum,%20yardımcı%20olabilir%20misiniz?" className="theme-btn">İletişime Geç <i><RiWhatsappLine size={16}/></i></Link>
                             </div>
                         </div>
                         {/* <!-- / END HERO DESIGN AREA --> */}

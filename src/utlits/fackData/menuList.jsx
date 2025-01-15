@@ -7,7 +7,7 @@ export const menuList = [
     {
         id: 2,
         path: "/about",
-        label: "Örnek Projeler"
+        label: "Projeler"
     },
 
 ]
