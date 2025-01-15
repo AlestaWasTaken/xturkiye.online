@@ -15,15 +15,12 @@ const AboutCount = () => {
                         <iframe
                             width="100%"
                             height="400"
-                            src="https://www.youtube.com/embed/KKFDogui-OQ"
+                            src="https://www.youtube.com/embed/8kOev7I40k0IXEH2"
                             title="YouTube video 1"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen
                         ></iframe>
-                        <Carousel.Caption>
-                            <h3> Wegh - Kennedy'i ben vurdum</h3>
-                        </Carousel.Caption>
                     </Carousel.Item>
 
                     {/* Second Slide with YouTube Video */}
@@ -37,9 +34,7 @@ const AboutCount = () => {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen
                         ></iframe>
-                        <Carousel.Caption>
-                            <h3> Tuğba Yurt - Dünya Hevesi</h3>
-                        </Carousel.Caption>
+                        
                     </Carousel.Item>
 
                     {/* Third Slide with YouTube Video */}
@@ -53,9 +48,7 @@ const AboutCount = () => {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen
                         ></iframe>
-                        <Carousel.Caption>
-                            <h3> Dilce Olcay - Beni Acımadan Vurdular</h3>
-                        </Carousel.Caption>
+                        
                     </Carousel.Item>
 
                     {/* Fourth Slide with YouTube Video */}
@@ -69,10 +62,7 @@ const AboutCount = () => {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen
                         ></iframe>
-                        <Carousel.Caption>
-                            <h3> 
-                            Tuğba Yurt - Yolun Sonu</h3>
-                        </Carousel.Caption>
+                        
                     </Carousel.Item>
 
                     {/* Fifth Slide with YouTube Video */}
@@ -80,15 +70,13 @@ const AboutCount = () => {
                         <iframe
                             width="100%"
                             height="400"
-                            src="https://www.youtube.com/embed/w0LtuMcdImc"
+                            src="https://www.youtube.com/embed/KKFDogui-OQ"
                             title="YouTube video 5"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen
                         ></iframe>
-                        <Carousel.Caption>
-                            <h3> Batuhan Aslan & JEW - HARSH</h3>
-                        </Carousel.Caption>
+                        
                     </Carousel.Item>
 
                     {/* Sixth Slide with YouTube Video */}
@@ -102,9 +90,7 @@ const AboutCount = () => {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen
                         ></iframe>
-                        <Carousel.Caption>
-                            <h3> Sefo - Bilemedim Ama Anıları Böyle Yakarlar</h3>
-                        </Carousel.Caption>
+                        
                     </Carousel.Item>
                 </Carousel>
 
