@@ -52,8 +52,8 @@ export const projectsData = [
     {
         id: 7,
         src: work_7,
-        category: "profesyonel Klip Prodüksiyon",
-        title: "Orange Rose Flower",
+        category: "Profesyonel Klip Prodüksiyon",
+        title: "Profesyonel Klip",
         size: "large"
     },
 

@@ -32,7 +32,7 @@ const Portfolio = () => {
                                         <div onClick={() => openSlider(index)} className="portfolio-box">
                                             <img src={src} alt="" data-rjs="2" />
                                             <span className="portfolio-category">{category}</span>
-                                            <h1 className="portfolio-caption"><Link to={"/single-project"} >{title}</Link></h1>
+                                            <h1 className="portfolio-caption"><Link to={"https://wa.me/905517477767"} >{title}</Link></h1>
                                         </div>
                                     </div>
                                 </div>

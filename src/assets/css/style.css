@@ -906,6 +906,15 @@ html {
     transition: all 500ms ease;
 }
 
+@media (max-width: 768px) {
+    .header-inner {
+      display: flex;
+      flex-direction: row; 
+      justify-content: space-between; 
+      width: 100%;
+    }
+    }
+
 .main-header .header-upper {
     z-index: 5;
     width: 100%;
@@ -965,9 +974,10 @@ html {
 .nav-outer {
     margin-left: auto;
 }
-
 .main-menu .mobile-logo {
     margin-right: auto;
+    padding-left: 1rem;
+    scale: 4;
 }
 
 .main-menu .mobile-logo img {
