@@ -1713,7 +1713,9 @@ ul.extra-skills li i {
     margin-bottom: -6px;
     padding: 0 30px 24px;
     -webkit-transition: ease-out 0.5s;
-    transition: ease-out 0.5s
+    transition: ease-out 0.5s;
+    font-size: 36px;
+    font-family: 'Poppins';
 }
 
 .portfolio-box .portfolio-caption * {

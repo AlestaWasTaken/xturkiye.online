@@ -11,7 +11,7 @@ export const projectsData = [
         id: 1,
         src: work_1,
         category: "Spotify Playlist Reklam",
-        title: "Spotify Playlist",
+        title: "Spotify Advertising",
         size: "large"
     },
     {
