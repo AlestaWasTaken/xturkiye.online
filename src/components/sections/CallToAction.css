@@ -6,11 +6,19 @@
   .slider-container .slick-slide {
     display: flex;
     justify-content: center;
-
   }
   
-  .pricing-card, .spotify-card {
-    background: #000000;
+  .pricing-card {
+    background: linear-gradient(135deg, #7841f1, #000000); /* Purple gradient */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .spotify-card {
+    background: linear-gradient(135deg, #4caf50, #000000); /* Green to Black gradient */
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -27,20 +35,20 @@
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 15px;
-    color: #333;
+    color: #fff; /* White text on the gradient background */
   }
   
   .price {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #3498db;
+    color: #fff; /* White text on the gradient background */
     margin-bottom: 15px;
   }
   
   .alesta {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #2ecc71;
+    color: #fff; /* White text on the gradient background */
     margin-bottom: 15px;
   }
   
@@ -52,7 +60,7 @@
   
   ul li {
     font-size: 1rem;
-    color: #666;
+    color: #ddd; /* Lighter text color to contrast with the dark background */
     margin-bottom: 10px;
   }
   
@@ -67,7 +75,6 @@
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    scale: 70%;
   }
   
   .custom-prev-arrow {
@@ -100,7 +107,7 @@
   
   /* Section Styling */
   .call-to-action-area {
-    background-color: #f4f6f700;
+    background-color: #000000;
     padding: 50px 0;
   }
   

@@ -231,24 +231,114 @@ const CallToAction = () => {
 
     const spotifyCards = [
         {
-            header: "⁠Editör Playlist Ve Algoritma Etkili Spotify Paketleri",
-            title: "Spotify Paket 1",
-            price: "2000₺",
+            header: "Editör Playlist Ve Algoritma Etkili Spotify Paketleri",
+            title: "Spotify İlk Evre",
+            price: "2750₺",
             features: [
-                "500 Takipçi",
-                "Yüksek Etkileşim",
-                "Özel Listeler",
+                "2.000 - 12.000 AYLIK DİNLEYİCİ",
+                "2.000 - 24.000 DİNLENME",
+                "RADYO RELEASE %70",
+                "ARTİST RADYO %70",
+                "TARZA UYGUN LİSTELER",
+                "EDİTÖR VE ALGORİTMA ETKİLİ"
             ]
         },
         {
-            title: "Spotify Paket 2",
-            price: "3500₺",
+            title: "Spotify 2. Evre",
+            price: "5100₺",
             features: [
-                "1000 Takipçi",
-                "Yüksek Etkileşim",
-                "Özel Listeler",
+                "5000 - 15.000 AYLIK DİNLEYİCİ",
+                "2.000 - 30.000 DİNLENME",
+                "RADYO RELEASE %70",
+                "ARTİST RADYO %70",
+                "TARZA UYGUN LİSTELER",
+                "EDİTÖR VE ALGORİTMA ETKİLİ"
             ]
         },
+        {
+            title: "Spotify İlk Adım",
+            price: "7600₺",
+            features: [
+                "7000 - 25.000 AYLIK DİNLEYİCİ",
+                "7000 - 50.000 DİNLENME",
+                "RADYO RELEASE %70",
+                "ARTİST RADYO %70",
+                "TARZA UYGUN LİSTELER",
+                "EDİTÖR VE ALGORİTMA ETKİLİ"
+            ]
+        },
+        {
+            title: "Spotify Giriş",
+            price: "17.300₺",
+            features: [
+                "15.000 - 45.000 AYLIK DİNLEYİCİ",
+                "15.000 - 90.000 DİNLENME",
+                "RADYO RELEASE %75",
+                "ARTİST RADYO %75",
+                "TARZA UYGUN LİSTELER",
+                "EDİTÖR VE ALGORİTMA ETKİLİ"
+            ]
+        },
+        {
+            title: "Spotify Yükseliş",
+            price: "23.100₺",
+            features: [
+                "30.000 - 65.000 AYLIK DİNLEYİCİ",
+                "30.000 - 150.000 DİNLENME",
+                "RADYO RELEASE %77",
+                "ARTİST RADYO %77",
+                "TARZA UYGUN LİSTELER",
+                "EDİTÖR VE ALGORİTMA ETKİLİ"
+            ]
+        },
+        {
+            title: "Spotify Viral",
+            price: "36.000₺",
+            features: [
+                "55.000 - 100.000 AYLIK DİNLEYİCİ",
+                "55.000 - 200.000 DİNLENME",
+                "RADYO RELEASE %80",
+                "ARTİST RADYO %80",
+                "TARZA UYGUN LİSTELER",
+                "EDİTÖR VE ALGORİTMA ETKİLİ"
+            ]
+        },
+        {
+            title: "Spotify Vezir",
+            price: "52.000₺",
+            features: [
+                "80.000 - 200.000 AYLIK DİNLEYİCİ",
+                "80.000 - 400.000 DİNLENME",
+                "RADYO RELEASE %80",
+                "ARTİST RADYO %80",
+                "TARZA UYGUN LİSTELER",
+                "EDİTÖR VE ALGORİTMA ETKİLİ"
+            ]
+        },
+        {
+            title: "Spotify ŞAH",
+            price: "59.000₺",
+            features: [
+                "90.000 - 300.000 AYLIK DİNLEYİCİ",
+                "90.000 - 600.000 DİNLENME",
+                "RADYO RELEASE %82",
+                "ARTİST RADYO %83",
+                "TARZA UYGUN LİSTELER",
+                "EDİTÖR VE ALGORİTMA ETKİLİ"
+            ]
+        },
+        {
+            title: "Spotify KRAL",
+            price: "101.000₺",
+            features: [
+                "150.000 - 600.000 AYLIK DİNLEYİCİ",
+                "150.000 - 1.200.000 DİNLENME",
+                "RADYO RELEASE %82",
+                "ARTİST RADYO %83",
+                "TARZA UYGUN LİSTELER",
+                "EDİTÖR VE ALGORİTMA ETKİLİ"
+            ]
+        }
         // Add more cards...
     ];
 
