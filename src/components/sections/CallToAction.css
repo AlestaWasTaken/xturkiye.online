@@ -1,183 +1,153 @@
-.call-to-action-area {
-    background-color: #0a0a0a;
-    color: white;
-    padding: 60px 20px;
+/* General Slider Styling */
+.slider-container {
+    margin: 30px 0;
+  }
+  
+  .slider-container .slick-slide {
+    display: flex;
+    justify-content: center;
+
+  }
+  
+  .pricing-card, .spotify-card {
+    background: #000000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
+    transition: all 0.3s ease;
+  }
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    position: relative; /* Slider butonları için */
-}
-
-.text-content h2 {
-    font-size: 24px;
+  
+  
+  .pricing-card:hover, .spotify-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  h3 {
+    font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 15px;
-}
-
-.text-content p {
-    font-size: 16px;
-    color: #b0b0b0;
-}
-
-.slider-container {
-    margin: 20px 0;
-    height: 400px; /* Slider yüksekliği */
-    overflow: hidden; /* Taşan içeriği gizle */
-    position: relative; /* Butonlar için */
-}
-
-.pricing-card {
-    background: linear-gradient(to bottom, #130f40, #000000);
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    margin: 10px 0; /* Kartlar arası boşluk */
-}
-
-.pricing-card h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.pricing-card .price {
-    font-size: 28px;
+    color: #333;
+  }
+  
+  .price {
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #ffffff;
-}
-
-.pricing-card ul {
-    list-style: none;
+    color: #3498db;
+    margin-bottom: 15px;
+  }
+  
+  .alesta {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2ecc71;
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    list-style-type: none;
     padding: 0;
-    margin-top: 10px;
-}
-
-.pricing-card ul li {
-    font-size: 14px;
-    color: #d0d0d0;
-    margin: 5px 0;
-}
-
-.btn-container {
-    margin-top: 30px;
-}
-
-.pricing-card:has(h3:contains("Spotify")) {
-    background: linear-gradient(135deg, #1db954, #0e722f); /* Spotify için yeşil gradient */
-}
-
-.whatsapp-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #25d366;
-    color: white;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-}
-
-.whatsapp-btn:hover {
-    background-color: #1ebe5d;
-}
-
-/* Özelleştirilmiş slider butonları */
-.custom-prev-arrow,
-.custom-next-arrow {
+    margin: 0;
+  }
+  
+  ul li {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  /* Custom Arrow Styling */
+  .custom-prev-arrow, .custom-next-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.2);
+    z-index: 1;
+    background-color: #fff;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    scale: 70%;
+  }
+  
+  .custom-prev-arrow {
+    left: 10px;
+  }
+  
+  .custom-next-arrow {
+    right: 10px;
+  }
+  
+  .custom-prev-arrow:hover, .custom-next-arrow:hover {
+    background-color: #3498db;
+  }
+  
+  .slick-dots {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .slick-dots li button {
+    background-color: #ddd;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+  }
+  
+  .slick-dots li.slick-active button {
+    background-color: #3498db;
+  }
+  
+  /* Section Styling */
+  .call-to-action-area {
+    background-color: #f4f6f700;
+    padding: 50px 0;
+  }
+  
+  .call-to-action-area .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .text-content h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .text-content p {
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .btn-container {
+    margin-top: 30px;
+  }
+  
+  .whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    z-index: 1;
-    transition: background-color 0.3s;
-}
-
-#spotify-card {
-    background: linear-gradient(to bottom right, #1a5d31, #000000);
-    color: red;
-}
-
-.custom-prev-arrow:hover,
-.custom-next-arrow:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-}
-
-.custom-prev-arrow {
-    left: 10px; /* Sola taşı */
-}
-
-.custom-next-arrow {
-    right: 10px; /* Sağa taşı */
-}
-
-/* Slider noktaları (dots) için özelleştirme */
-.slick-dots {
-    bottom: -30px; /* Noktaları aşağıya taşı */
-    text-align: center; /* Noktaları ortala */
-}
-
-.slick-dots li {
-    margin: 0 5px; /* Noktalar arası boşluk */
-}
-
-.slick-dots li button:before {
-    color: white; /* Nokta rengi */
-    font-size: 12px; /* Nokta boyutu */
-}
-
-.slick-dots li.slick-active button:before {
-    color: #25d366; /* Aktif nokta rengi */
-}
-
-/* Style for Spotify slider card */
-.spotify-card {
-    background: linear-gradient(145deg, #39af54, #000000); /* Green gradient */
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover effect for Spotify cards */
-.spotify-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Style for title and price */
-.spotify-card h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.spotify-card .alesta {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-/* Style for the features list */
-.spotify-card ul {
-    padding-left: 20px;
-    list-style-type: disc;
-}
-
-.spotify-card li {
-    font-size: 14px;
-    margin-bottom: 5px;
-}
+  }
+  
+  .whatsapp-btn:hover {
+    background-color: #128C7E;
+    transition: background-color 0.3s ease;
+  }
+  
+  .whatsapp-btn svg {
+    margin-left: 10px;
+  }
+  

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { RiWhatsappFill, RiArrowLeftSLine, RiArrowRightSLine } from "@remixicon/react";
-import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import "./CallToAction.css";
+import { RiWhatsappFill } from "@remixicon/react";
+import { Link } from "react-router-dom";
+import { RiArrowLeftSLine, RiArrowRightSLine } from "@remixicon/react";
 
-// Özelleştirilmiş slider butonları
+// Custom slider buttons
 const CustomPrevArrow = (props) => (
     <div className="custom-prev-arrow" onClick={props.onClick}>
         <RiArrowLeftSLine size={30} />
@@ -18,9 +18,6 @@ const CustomNextArrow = (props) => (
 );
 
 const CallToAction = () => {
-    const [pricingSlide, setPricingSlide] = useState(0); // Track the current slide for pricingCards
-    const [spotifySlide, setSpotifySlide] = useState(0); // Track the current slide for spotifyCards
-
     const settings = {
         dots: true,
         infinite: true,
@@ -47,7 +44,8 @@ const CallToAction = () => {
         ],
     };
 
-    const pricingCards = [
+    // Separate categories based on your pricing cards
+    const tiktokKullaniciCards = [
         {  
             header: "Tiktok Kullanıcı Akım Paketleri",
             title: "Tiktok 50 Kullanıcı",
@@ -117,6 +115,10 @@ const CallToAction = () => {
                 
             ]
         },
+        // Add more cards...
+    ];
+
+    const tiktokFenomenCards = [
         {
             header: " Tiktok Fenomen Akım Paketleri",
             title: "Tiktok 5 Fenomen",
@@ -185,6 +187,10 @@ const CallToAction = () => {
                 "%100 Etkili"
             ]
         },
+        // Add more cards...
+    ];
+
+    const tiktokOzelAkımCards = [
         {
             header: "Tiktok Hepsi Bir Arada Özel Akım Paketleri",
             title: "Özel Tiktok Paketi 1",
@@ -219,121 +225,30 @@ const CallToAction = () => {
                 "%100 Etkili"
             ],
         },
-        // Add the other cards as needed...
+        // Add more cards...
     ];
 
     const spotifyCards = [
         {
-            header: "⁠Editör Playlist Ve Algoritma Etkili Spotify Paketleri",
-            title: "Spotify İlk Evre",
-            price: "2750₺",
+            header: "⁠Editör Playlist Ve Algoritma Etkili Spotify Paketleri",
+            title: "Spotify Paket 1",
+            price: "2000₺",
             features: [
-                "2.000 - 12.000 AYLIK DİNLEYİCİ",
-                "2.000 - 24.000 DİNLENME",
-                "RADYO RELEASE %70",
-                "ARTİST RADYO %70",
-                "TARZA UYGUN LİSTELER",
-                "EDİTÖR VE ALGORİTMA ETKİLİ"
+                "500 Takipçi",
+                "Yüksek Etkileşim",
+                "Özel Listeler",
             ]
         },
         {
-            title: "Spotify 2. Evre",
-            price: "5100₺",
+            title: "Spotify Paket 2",
+            price: "3500₺",
             features: [
-                "5000 - 15.000 AYLIK DİNLEYİCİ",
-                "2.000 - 30.000 DİNLENME",
-                "RADYO RELEASE %70",
-                "ARTİST RADYO %70",
-                "TARZA UYGUN LİSTELER",
-                "EDİTÖR VE ALGORİTMA ETKİLİ"
+                "1000 Takipçi",
+                "Yüksek Etkileşim",
+                "Özel Listeler",
             ]
         },
-        {
-            title: "Spotify İlk Adım",
-            price: "7600₺",
-            features: [
-                "7000 - 25.000 AYLIK DİNLEYİCİ",
-                "7000 - 50.000 DİNLENME",
-                "RADYO RELEASE %70",
-                "ARTİST RADYO %70",
-                "TARZA UYGUN LİSTELER",
-                "EDİTÖR VE ALGORİTMA ETKİLİ"
-            ]
-        },
-        {
-            header:  "⁠Editör Playlist Ve Algoritma Etkili Spotify Paketleri",
-            title: "Spotify Giriş",
-            price: "17.300₺",
-            features: [
-                "15.000 - 45.000 AYLIK DİNLEYİCİ",
-                "15.000 - 90.000 DİNLENME",
-                "RADYO RELEASE %75",
-                "ARTİST RADYO %75",
-                "TARZA UYGUN LİSTELER",
-                "EDİTÖR VE ALGORİTMA ETKİLİ"
-            ]
-        },
-        {
-            title: "Spotify Yükseliş",
-            price: "23.100₺",
-            features: [
-                "30.000 - 65.000 AYLIK DİNLEYİCİ",
-                "30.000 - 150.000 DİNLENME",
-                "RADYO RELEASE %77",
-                "ARTİST RADYO %77",
-                "TARZA UYGUN LİSTELER",
-                "EDİTÖR VE ALGORİTMA ETKİLİ"
-            ]
-        },
-        {
-            title: "Spotify Viral",
-            price: "36.000₺",
-            features: [
-                "55.000 - 100.000 AYLIK DİNLEYİCİ",
-                "55.000 - 200.000 DİNLENME",
-                "RADYO RELEASE %80",
-                "ARTİST RADYO %80",
-                "TARZA UYGUN LİSTELER",
-                "EDİTÖR VE ALGORİTMA ETKİLİ"
-            ]
-        },
-        {
-            header: " ⁠Editör Playlist Ve Algoritma Etkili Spotify Paketleri",
-            title: "Spotify Vezir",
-            price: "52.000₺",
-            features: [
-                "80.000 - 200.000 AYLIK DİNLEYİCİ",
-                "80.000 - 400.000 DİNLENME",
-                "RADYO RELEASE %80",
-                "ARTİST RADYO %80",
-                "TARZA UYGUN LİSTELER",
-                "EDİTÖR VE ALGORİTMA ETKİLİ"
-            ]
-        },
-        {
-            title: "Spotify ŞAH",
-            price: "59.000₺",
-            features: [
-                "90.000 - 300.000 AYLIK DİNLEYİCİ",
-                "90.000 - 600.000 DİNLENME",
-                "RADYO RELEASE %82",
-                "ARTİST RADYO %83",
-                "TARZA UYGUN LİSTELER",
-                "EDİTÖR VE ALGORİTMA ETKİLİ"
-            ]
-        },
-        {
-            title: "Spotify KRAL",
-            price: "101.000₺",
-            features: [
-                "150.000 - 600.000 AYLIK DİNLEYİCİ",
-                "150.000 - 1.200.000 DİNLENME",
-                "RADYO RELEASE %82",
-                "ARTİST RADYO %83",
-                "TARZA UYGUN LİSTELER",
-                "EDİTÖR VE ALGORİTMA ETKİLİ"
-            ]
-        }
+        // Add more cards...
     ];
 
     return (
@@ -349,13 +264,11 @@ const CallToAction = () => {
                 </div>
 
                 <center>
-                    <h3>{`  ${pricingCards[pricingSlide]?.header}`}</h3> {/* Pricing header */}
+                    {/* Tiktok Kullanıcı Akım Paketleri Slider */}
+                    <h3>{`  ${tiktokKullaniciCards[0]?.header}`}</h3>
                     <div className="slider-container">
-                        <Slider
-                            {...settings}
-                            afterChange={(index) => setPricingSlide(index)} // Update pricing slide index
-                        >
-                            {pricingCards.map((card, index) => (
+                        <Slider {...settings}>
+                            {tiktokKullaniciCards.map((card, index) => (
                                 <div className="pricing-card" key={index}>
                                     <h3>{card.title}</h3>
                                     <p className="price">{card.price}</p>
@@ -369,18 +282,52 @@ const CallToAction = () => {
                         </Slider>
                     </div>
 
-                    <h3>{`  ${spotifyCards[spotifySlide]?.header}`}</h3> {/* Spotify header */}
+                    {/* Tiktok Fenomen Akım Paketleri Slider */}
+                    <h3>{`  ${tiktokFenomenCards[0]?.header}`}</h3>
                     <div className="slider-container">
-                        <Slider
-                            {...settings}
-                            afterChange={(index) => setSpotifySlide(index)} // Update spotify slide index
-                        >
-                            {spotifyCards.map((spotify, index) => (
-                                <div className="spotify-card" key={index}>
-                                    <h3>{spotify.title}</h3>
-                                    <p className="alesta">{spotify.price}</p>
+                        <Slider {...settings}>
+                            {tiktokFenomenCards.map((card, index) => (
+                                <div className="pricing-card" key={index}>
+                                    <h3>{card.title}</h3>
+                                    <p className="price">{card.price}</p>
                                     <ul>
-                                        {spotify.features.map((feature, i) => (
+                                        {card.features.map((feature, i) => (
+                                            <li key={i}>{feature}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </Slider>
+                    </div>
+
+                    {/* Tiktok Hepsi Bir Arada Özel Akım Paketleri Slider */}
+                    <h3>{`  ${tiktokOzelAkımCards[0]?.header}`}</h3>
+                    <div className="slider-container">
+                        <Slider {...settings}>
+                            {tiktokOzelAkımCards.map((card, index) => (
+                                <div className="pricing-card" key={index}>
+                                    <h3>{card.title}</h3>
+                                    <p className="price">{card.price}</p>
+                                    <ul>
+                                        {card.features.map((feature, i) => (
+                                            <li key={i}>{feature}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </Slider>
+                    </div>
+
+                    {/* Spotify Slider */}
+                    <h3>{`  ${spotifyCards[0]?.header}`}</h3>
+                    <div className="slider-container">
+                        <Slider {...settings}>
+                            {spotifyCards.map((card, index) => (
+                                <div className="spotify-card" key={index}>
+                                    <h3>{card.title}</h3>
+                                    <p className="alesta">{card.price}</p>
+                                    <ul>
+                                        {card.features.map((feature, i) => (
                                             <li key={i}>{feature}</li>
                                         ))}
                                     </ul>
