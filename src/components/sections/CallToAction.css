@@ -17,8 +17,6 @@
     text-align: center;
     transition: all 0.3s ease;
   }
-
-  
   
   .pricing-card:hover, .spotify-card:hover {
     transform: translateY(-10px);

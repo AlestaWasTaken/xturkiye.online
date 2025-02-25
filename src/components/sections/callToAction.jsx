@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { RiWhatsappFill } from "@remixicon/react";
 import { Link } from "react-router-dom";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "@remixicon/react";
+import "./CallToAction.css";
 
 // Custom slider buttons
 const CustomPrevArrow = (props) => (
