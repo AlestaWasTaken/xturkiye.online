@@ -9,12 +9,13 @@
   }
   
   .pricing-card {
-    background: linear-gradient(135deg, #7841f1, #000000); /* Purple gradient */
+    background: linear-gradient(135deg, #310690, #000000); /* Purple gradient */
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: all 0.3s ease;
+    
   }
   
   .spotify-card {
@@ -124,7 +125,7 @@
 
   }
   .text-content{
-    background-color: #25D366;
+    background-color: #00ff5e;
     border-radius: 50px 20px;
     
   }
