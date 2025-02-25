@@ -145,7 +145,7 @@
 
 /* Style for Spotify slider card */
 .spotify-card {
-    background: linear-gradient(145deg, #21963d, #000000); /* Green gradient */
+    background: linear-gradient(145deg, #39af54, #000000); /* Green gradient */
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -165,7 +165,7 @@
     margin-bottom: 10px;
 }
 
-.spotify-card .price {
+.spotify-card .alesta {
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 15px;

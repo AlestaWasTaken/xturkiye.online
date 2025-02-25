@@ -18,7 +18,8 @@ const CustomNextArrow = (props) => (
 );
 
 const CallToAction = () => {
-    const [currentSlide, setCurrentSlide] = useState(0); // Track the current slide
+    const [pricingSlide, setPricingSlide] = useState(0); // Track the current slide for pricingCards
+    const [spotifySlide, setSpotifySlide] = useState(0); // Track the current slide for spotifyCards
 
     const settings = {
         dots: true,
@@ -44,9 +45,6 @@ const CallToAction = () => {
                 },
             },
         ],
-        afterChange: (index) => {
-            setCurrentSlide(index); // Update the slide index when the slide changes
-        },
     };
 
     const pricingCards = [
@@ -224,7 +222,6 @@ const CallToAction = () => {
         // Add the other cards as needed...
     ];
 
-    // Spotify Cards
     const spotifyCards = [
         {
             header: "⁠Editör Playlist Ve Algoritma Etkili Spotify Paketleri",
@@ -352,9 +349,12 @@ const CallToAction = () => {
                 </div>
 
                 <center>
-                    <h3>{`  ${pricingCards[currentSlide]?.header}`}</h3>
+                    <h3>{`  ${pricingCards[pricingSlide]?.header}`}</h3> {/* Pricing header */}
                     <div className="slider-container">
-                        <Slider {...settings}>
+                        <Slider
+                            {...settings}
+                            afterChange={(index) => setPricingSlide(index)} // Update pricing slide index
+                        >
                             {pricingCards.map((card, index) => (
                                 <div className="pricing-card" key={index}>
                                     <h3>{card.title}</h3>
@@ -368,15 +368,19 @@ const CallToAction = () => {
                             ))}
                         </Slider>
                     </div>
-                    <h3>{`  ${spotifyCards[currentSlide]?.header}`}</h3>
+
+                    <h3>{`  ${spotifyCards[spotifySlide]?.header}`}</h3> {/* Spotify header */}
                     <div className="slider-container">
-                        <Slider {...settings}>
-                            {spotifyCards.map((card, index) => (
+                        <Slider
+                            {...settings}
+                            afterChange={(index) => setSpotifySlide(index)} // Update spotify slide index
+                        >
+                            {spotifyCards.map((spotify, index) => (
                                 <div className="spotify-card" key={index}>
-                                    <h3>{card.title}</h3>
-                                    <p className="price">{card.price}</p>
+                                    <h3>{spotify.title}</h3>
+                                    <p className="alesta">{spotify.price}</p>
                                     <ul>
-                                        {card.features.map((feature, i) => (
+                                        {spotify.features.map((feature, i) => (
                                             <li key={i}>{feature}</li>
                                         ))}
                                     </ul>
