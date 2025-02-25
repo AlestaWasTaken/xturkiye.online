@@ -71,11 +71,11 @@
   }
   
   .custom-prev-arrow {
-    left: 10px;
+    left: -20px;
   }
   
   .custom-next-arrow {
-    right: 10px;
+    right: -20px;
   }
   
   .custom-prev-arrow:hover, .custom-next-arrow:hover {
