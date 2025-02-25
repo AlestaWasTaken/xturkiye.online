@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { RiWhatsappFill, RiArrowLeftSLine, RiArrowRightSLine } from "@remixicon/react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
@@ -18,44 +18,40 @@ const CustomNextArrow = (props) => (
 );
 
 const CallToAction = () => {
-    // Slider ayarları
+    const [currentSlide, setCurrentSlide] = useState(0); // Track the current slide
+
     const settings = {
-        dots: true, // Slider altındaki noktalar
-        infinite: true, // Slider'ın sonsuz döngüsü
-        speed: 500, // Geçiş hızı
-        slidesToShow: 3, // Aynı anda gösterilecek kart sayısı (3 kart)
-        slidesToScroll: 3, // Kaydırma başına geçilecek kart sayısı (3 kart)
-        vertical: false, // Yatay kaydırma
-        verticalSwiping: false, // Yatay kaydırma için swipe özelliği
-        prevArrow: <CustomPrevArrow />, // Özelleştirilmiş önceki buton
-        nextArrow: <CustomNextArrow />, // Özelleştirilmiş sonraki buton
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        prevArrow: <CustomPrevArrow />,
+        nextArrow: <CustomNextArrow />,
         responsive: [
             {
-                breakpoint: 768, // Tablet boyutu
+                breakpoint: 768,
                 settings: {
-                    slidesToShow: 2, // Tablet boyutunda 2 kart göster
-                    slidesToScroll: 2, // 2 kart kaydır
-                    vertical: false, // Yatay kaydırma
-                    verticalSwiping: false, // Yatay kaydırma için swipe
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                 },
             },
             {
-                breakpoint: 480, // Mobil boyutu
+                breakpoint: 480,
                 settings: {
-                    slidesToShow: 1, // Mobil boyutunda 1 kart göster
-                    slidesToScroll: 1, // 1 kart kaydır
-                    vertical: false, // Yatay kaydırma
-                    verticalSwiping: false, // Yatay kaydırma için swipe
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                 },
             },
         ],
+        afterChange: (index) => {
+            setCurrentSlide(index); // Update the slide index when the slide changes
+        },
     };
-    
-
-    
 
     const pricingCards = [
-        {
+        {  
+            header: "Tiktok Kullanıcı Akım Paketleri",
             title: "Tiktok 50 Kullanıcı",
             price: "1200₺",
             features: [
@@ -89,6 +85,7 @@ const CallToAction = () => {
             ]
         },
         {
+            header: "Tiktok Kullanıcı Akım Paketleri",
             title: "Tiktok 200 Kullanıcı",
             price: "3950₺",
             features: [
@@ -123,6 +120,7 @@ const CallToAction = () => {
             ]
         },
         {
+            header: " Tiktok Fenomen Akım Paketleri",
             title: "Tiktok 5 Fenomen",
             price: "3250₺",
             features: [
@@ -156,6 +154,7 @@ const CallToAction = () => {
             ]
         },
         {
+            header: "Tiktok Fenomen Akım Paketleri",
             title: "Tiktok 30 Fenomen",
             price: "15.000₺",
             features: [
@@ -189,6 +188,7 @@ const CallToAction = () => {
             ]
         },
         {
+            header: "Tiktok Hepsi Bir Arada Özel Akım Paketleri",
             title: "Özel Tiktok Paketi 1",
             price: "12.500₺",
             features: [
@@ -221,7 +221,13 @@ const CallToAction = () => {
                 "%100 Etkili"
             ],
         },
+        // Add the other cards as needed...
+    ];
+
+    // Spotify Cards
+    const spotifyCards = [
         {
+            header: "⁠Editör Playlist Ve Algoritma Etkili Spotify Paketleri",
             title: "Spotify İlk Evre",
             price: "2750₺",
             features: [
@@ -258,6 +264,7 @@ const CallToAction = () => {
             ]
         },
         {
+            header:  "⁠Editör Playlist Ve Algoritma Etkili Spotify Paketleri",
             title: "Spotify Giriş",
             price: "17.300₺",
             features: [
@@ -294,6 +301,7 @@ const CallToAction = () => {
             ]
         },
         {
+            header: " ⁠Editör Playlist Ve Algoritma Etkili Spotify Paketleri",
             title: "Spotify Vezir",
             price: "52.000₺",
             features: [
@@ -342,24 +350,42 @@ const CallToAction = () => {
                         Sende şimdi bize katıl, müziğini duyurmaya hemen başla.
                     </p>
                 </div>
-<center>
-                {/* Slider alanı */}
-                <div className="slider-container">
-                    <Slider {...settings}>
-                        {pricingCards.map((card, index) => (
-                            <div className="pricing-card" key={index}>
-                                <h3>{card.title}</h3>
-                                <p className="price">{card.price}</p>
-                                <ul>
-                                    {card.features.map((feature, i) => (
-                                        <li key={i}>{feature}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </Slider>
-                </div>
+
+                <center>
+                    <h3>{`  ${pricingCards[currentSlide]?.header}`}</h3>
+                    <div className="slider-container">
+                        <Slider {...settings}>
+                            {pricingCards.map((card, index) => (
+                                <div className="pricing-card" key={index}>
+                                    <h3>{card.title}</h3>
+                                    <p className="price">{card.price}</p>
+                                    <ul>
+                                        {card.features.map((feature, i) => (
+                                            <li key={i}>{feature}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </Slider>
+                    </div>
+                    <h3>{`  ${spotifyCards[currentSlide]?.header}`}</h3>
+                    <div className="slider-container">
+                        <Slider {...settings}>
+                            {spotifyCards.map((card, index) => (
+                                <div className="spotify-card" key={index}>
+                                    <h3>{card.title}</h3>
+                                    <p className="price">{card.price}</p>
+                                    <ul>
+                                        {card.features.map((feature, i) => (
+                                            <li key={i}>{feature}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </Slider>
+                    </div>
                 </center>
+
                 <div className="btn-container">
                     <Link
                         to="https://api.whatsapp.com/send?phone=905517477767&text=Merhaba,%20xturkiye.online%20sitenizden%20ulaşıyorum,%20yardımcı%20olabilir%20misiniz?"

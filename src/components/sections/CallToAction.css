@@ -65,6 +65,10 @@
     margin-top: 30px;
 }
 
+.pricing-card:has(h3:contains("Spotify")) {
+    background: linear-gradient(135deg, #1db954, #0e722f); /* Spotify için yeşil gradient */
+}
+
 .whatsapp-btn {
     display: inline-flex;
     align-items: center;
@@ -102,6 +106,11 @@
     transition: background-color 0.3s;
 }
 
+#spotify-card {
+    background: linear-gradient(to bottom right, #1a5d31, #000000);
+    color: red;
+}
+
 .custom-prev-arrow:hover,
 .custom-next-arrow:hover {
     background-color: rgba(255, 255, 255, 0.4);
@@ -132,4 +141,43 @@
 
 .slick-dots li.slick-active button:before {
     color: #25d366; /* Aktif nokta rengi */
+}
+
+/* Style for Spotify slider card */
+.spotify-card {
+    background: linear-gradient(145deg, #21963d, #000000); /* Green gradient */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for Spotify cards */
+.spotify-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for title and price */
+.spotify-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.spotify-card .price {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Style for the features list */
+.spotify-card ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.spotify-card li {
+    font-size: 14px;
+    margin-bottom: 5px;
 }
