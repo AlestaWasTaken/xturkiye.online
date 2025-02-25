@@ -7,6 +7,8 @@ import './assets/css/spacing.css'
 import './assets/css/style.css'
 import './assets/css/responsive.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
