@@ -119,23 +119,24 @@
   }
   
   .text-content h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #000000;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
+}
 
-  }
-  .text-content{
-    background-color: #00ff5e;
-    border-radius: 50px 20px;
-    
-  }
+
+.text-content {
+  background-color: #00ff5e;
+  border-radius: 50px 20px;
+  padding: 20px; /* İçeriğin biraz daha nefes almasını sağlar */
+  margin-top: 20px; /* Yeşil alanı aşağı kaydırır */
+}
   
   .text-content p {
     font-size: 1.125rem;
     color: #000000;
     margin-bottom: 30px;
-    
-  }
+}
   
   .btn-container {
     margin-top: 30px;

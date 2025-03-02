@@ -47,19 +47,9 @@ const CallToAction = () => {
 
     // Separate categories based on your pricing cards
     const tiktokKullaniciCards = [
-        {  
-            header: "Tiktok Kullanıcı Akım Paketleri",
-            title: "Tiktok 50 Kullanıcı",
-            price: "1200₺",
-            features: [
-                "%100 Doğal Kullanıcılar",
-                "500 - 10.000 Takipçi Aralığı",
-                "Özgün İçerikler",
-                "Sesin Keşfete Düşmesi İçin",
-                "%100 Etkili" 
-            ]
-        },
+    
         {
+            header: "Tiktok Kullanıcı Akım Paketleri",
             title: "Tiktok 100 Kullanıcı",
             price: "2200₺",
             features: [
