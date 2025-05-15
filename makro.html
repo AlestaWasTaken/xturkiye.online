@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="makro.css">
+    <title>XTurkiye - TikTok Hizmetleri</title>
+    
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="mil-background">
+    <div class="mil-pentagon-animation"></div>
+</div>
+
+<header class="mil-header">
+    <div class="mil-frame-top">
+        <a href="index.html" class="mil-logo">
+            <img src="xturkiye.png" alt="XTurkiye Logo" class="mil-logo-img">
+        </a>
+        <div class="mil-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+    </div>
+    
+    <nav class="mil-main-menu">
+        <ul>
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="bizkimiz.html">Hakkımızda</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+    <!-- Ana İçerik -->
+    <div class="mil-content">
+        <div class="pricing-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/640px-TikTok_logo.svg.png"
+                 alt="TikTok Logo" class="spotify-logo">
+            <p class="listener-count" id="microInfluencerCount">Minimum <strong>+1</strong> Makro Fenomen</p>
+
+            <div class="price" id="priceMicroInfluencer">₺4.000</div>
+
+            <div class="slider-container">
+                <span class="slider-arrow">»</span>
+                <span class="slider-text">Kaydır</span>
+                <input type="range" id="sliderMicroInfluencer" min="1" max="100" value="1" step="1">
+            </div>
+
+            <div class="yazilar">
+                <p><strong>%100 Organik ve Gerçek Türk TikTok Kullanıcılarıyla Tanıtım Hizmeti!</strong></p>
+                <p>• Şarkınıza özel, yaratıcı ve kaliteli içerikler paylaşılır.</p>
+                <p>• Paylaşım yapan kullanıcılar: <strong>100.000 - 800.000 takipçiye sahip, aktif ve etkili profiller</strong></p>
+                <p>• Şarkınızın keşfete düşmesi ve daha geniş kitlelere ulaşması hedeflenir.</p>
+                <p>• <strong>%100 kaliteli ve özgün içerik garantisi.</strong></p>
+                <p>• Şarkınızın tarzına uygun hedefleme yapılır.</p>
+                <p>• <strong>Kişiye özel kampanya planlaması için 10.00 - 18.00 saatleri arasında WhatsApp destek hattımızdan bize ulaşabilirsiniz.</strong></p>
+            </div>
+
+            <a href="#" class="satinal" onclick="showModalTikTok('user')">Sipariş ver</a>
+        </div>
+
+        <script>
+    // Mobil Menü Toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuBtn = document.querySelector('.mil-menu-btn');
+        const menu = document.querySelector('.mil-main-menu');
+        
+        menuBtn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+        
+        // Menü linklerine tıklandığında menüyü kapat
+        const menuLinks = document.querySelectorAll('.mil-main-menu a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuBtn.classList.remove('active');
+                menu.classList.remove('active');
+            });
+        });
+    });
+
+        // Partikül animasyonu
+        function createParticles() {
+    const particlesContainer = document.querySelector('.mil-background');
+    if (!particlesContainer) return; // Güvenlik için kontrol
+
+    const particleCount = window.innerWidth < 768 ? 20 : 50;
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('mil-particle');
+        
+        const size = Math.random() * 3 + 2;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        
+        particle.style.left = `${Math.random() * 100}vw`;
+        particle.style.top = `${Math.random() * 100}vh`;
+        
+        const duration = Math.random() * 20 + 10;
+        const delay = Math.random() * 5;
+        particle.style.animation = `float ${duration}s linear ${delay}s infinite`;
+        
+        particlesContainer.appendChild(particle);
+    }
+}
+
+window.addEventListener('load', () => {
+    createParticles();
+
+    const bgAnimation = document.querySelector('.mil-pentagon-animation');
+    if (!bgAnimation) return;
+
+    let scale = 1;
+    let direction = 0.0002;
+
+    function animateBackground() {
+        scale += direction;
+
+        if (scale > 1.05) direction = -0.0002;
+        if (scale < 0.95) direction = 0.0002;
+
+        bgAnimation.style.transform = `scale(${scale})`;
+        requestAnimationFrame(animateBackground);
+    }
+
+    animateBackground();
+});
+        
+        // Diğer JavaScript kodları aynı şekilde kalacak...
+
+</script>
+
+
+        <!-- TikTok Referans Slider -->
+        <section class="tiktok-ref-section">
+            <h2>Makro Fenomenlerle Yaratılan Etki</h2>
+            <p>Bu çalışmada videolarınız aşağıda örneklediğimiz şekilde çekilecektir.</p>
+            
+            <div class="tiktok-slider-container">
+                <div class="tiktok-slider">
+                    <!-- Video 1 -->
+                    <div class="tiktok-card">
+                        <div class="tiktok-thumbnail">
+                            <img src="https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/ocWb4ADJIFAqQRCeoDEooeIVDhnbfj50PisvAT?lk3s=b59d6b55&x-expires=1747346400&x-signature=OOrZOlklWMoE2lDwr82BdyQqTso%3D&shp=b59d6b55&shcp=-" alt="Örnek Çalışma 1">
+                            <div class="tiktok-logo"><i class="fab fa-tiktok"></i></div>
+                        </div>
+                        <div class="tiktok-stats">
+                            <span>❤️ 12.4K</span>
+                            <span>💬 842</span>
+                            <span>↗️ 1.2K</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 2 -->
+                    <div class="tiktok-card">
+                        <div class="tiktok-thumbnail">
+                            <img src="https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/o8bIZivrZCtYO8VEkMclANEAABAy75OcCJAiB?lk3s=b59d6b55&x-expires=1747346400&x-signature=Vw848oN7H62qW%2BSepAEV%2FngGRc4%3D&shp=b59d6b55&shcp=-" alt="Örnek Çalışma 2">
+                            <div class="tiktok-logo"><i class="fab fa-tiktok"></i></div>
+                        </div>
+                        <div class="tiktok-stats">
+                            <span>❤️ 8.7K</span>
+                            <span>💬 521</span>
+                            <span>↗️ 943</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 3 -->
+                    <div class="tiktok-card">
+                        <div class="tiktok-thumbnail">
+                            <img src="https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/osAOQEfIGdLMSJSVAIeMA9AAfLm7AgGRRfcG8O?lk3s=b59d6b55&x-expires=1747346400&x-signature=eRr0ASeIV9Q9hayCwDDT77RFcFA%3D&shp=b59d6b55&shcp=-" alt="Örnek Çalışma 3">
+                            <div class="tiktok-logo"><i class="fab fa-tiktok"></i></div>
+                        </div>
+                        <div class="tiktok-stats">
+                            <span>❤️ 16.7K</span>
+                            <span>💬 791</span>
+                            <span>↗️ 1023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-prev" aria-label="Önceki video"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots"></div>
+                    <button class="slider-next" aria-label="Sonraki video"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal -->
+    <div id="purchaseModalTikTok" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalTikTok()">&times;</span>
+            <h3>Siparişinizi Oluşturun</h3>
+            <p><strong>Fiyat:</strong> <span id="finalPriceTikTok">₺0</span></p>
+            <p><strong>Seçim:</strong> <span id="finalCountTikTok"></span></p>
+            
+            <input type="text" id="tiktokName" placeholder="Adınız">
+            
+            <label for="tikTokLink">TikTok Linkinizi Girin:</label>
+            <input type="text" id="tikTokLink" placeholder="TikTok linkinizi buraya yazın">
+            
+            <button onclick="submitLinkTikTok()">Gönder</button>
+        </div>
+    </div>
+
+    <script>
+        // TikTok Kartları için Slider İşlevi
+        document.addEventListener("DOMContentLoaded", function() {
+            const slider = document.getElementById("sliderMicroInfluencer");
+            const priceElement = document.getElementById("priceMicroInfluencer");
+            const countElement = document.getElementById("microInfluencerCount");
+
+            slider.addEventListener("input", function() {
+                const value = this.value;
+                const calculatedPrice = value * 4000;
+                
+                const formattedPrice = new Intl.NumberFormat('tr-TR', {
+                    style: 'currency',
+                    currency: 'TRY',
+                    minimumFractionDigits: 0
+                }).format(calculatedPrice);
+                
+                priceElement.textContent = formattedPrice;
+                countElement.innerHTML = `Minimum <strong>+${value}</strong> Makro Fenomen`;
+            });
+
+            // Slider kontrolü
+            const tiktokSlider = document.querySelector('.tiktok-slider');
+            const prevBtn = document.querySelector('.slider-prev');
+            const nextBtn = document.querySelector('.slider-next');
+            const dotsContainer = document.querySelector('.slider-dots');
+            
+            let currentIndex = 0;
+            let cardWidth = document.querySelector('.tiktok-card').offsetWidth + 24; // 24px gap
+            
+            function updateSlider() {
+                tiktokSlider.scrollTo({
+                    left: currentIndex * cardWidth,
+                    behavior: 'smooth'
+                });
+                
+                updateDots();
+            }
+            
+            function updateDots() {
+                const dots = document.querySelectorAll('.dot');
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            // Dot'ları oluştur
+            const cards = document.querySelectorAll('.tiktok-card');
+            cards.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if(index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateSlider();
+                });
+                dotsContainer.appendChild(dot);
+            });
+            
+            prevBtn.addEventListener('click', () => {
+                if(currentIndex > 0) {
+                    currentIndex--;
+                    updateSlider();
+                }
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                if(currentIndex < cards.length - 1) {
+                    currentIndex++;
+                    updateSlider();
+                }
+            });
+            
+            // Responsive için cardWidth'ı güncelle
+            window.addEventListener('resize', () => {
+                cardWidth = document.querySelector('.tiktok-card').offsetWidth + 24;
+            });
+        });
+
+        // Modal'ı gösterme fonksiyonu
+        function showModalTikTok() {
+            const modal = document.getElementById('purchaseModalTikTok');
+            const price = document.getElementById('priceMicroInfluencer').textContent;
+            const count = document.getElementById('microInfluencerCount').textContent;
+
+            document.getElementById('finalPriceTikTok').textContent = price;
+            document.getElementById('finalCountTikTok').textContent = count;
+            modal.style.display = "block";
+        }
+
+        // Modal'ı kapatma fonksiyonu
+        function closeModalTikTok() {
+            const modal = document.getElementById('purchaseModalTikTok');
+            modal.style.display = "none";
+        }
+
+        // TikTok Linki Gönderme ve WhatsApp'a yönlendirme
+        function submitLinkTikTok() {
+            const name = document.getElementById('tiktokName').value.trim();
+            const tikTokLink = document.getElementById('tikTokLink').value.trim();
+            const finalPrice = document.getElementById('finalPriceTikTok').textContent;
+            const finalCount = document.getElementById('finalCountTikTok').textContent;
+
+            if (!name) {
+                alert("Lütfen adınızı girin.");
+                return;
+            }
+
+            if (!tikTokLink) {
+                alert("Lütfen geçerli bir TikTok linki girin.");
+                return;
+            }
+
+            const phoneNumber = "905334237961";
+            const message = `Merhaba, adım ${name} TikTok Hizmeti satın almak istiyorum.\n\n` +
+                           `Paket Bilgisi: ${finalCount}\n` +
+                           `Fiyat: ${finalPrice}\n` +
+                           `TikTok Linki: ${tikTokLink}\n\n` +
+                           `Ödeme yapmak ve siparişi tamamlamak istiyorum.`;
+            
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            closeModalTikTok();
+        }
+
+        // Modal dışına tıklandığında kapanmasını sağlamak için
+        window.onclick = function(event) {
+            const modal = document.getElementById('purchaseModalTikTok');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
