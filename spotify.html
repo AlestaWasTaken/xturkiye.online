@@ -293,14 +293,17 @@ window.addEventListener('resize', () => {
             }
 
             const phoneNumber = "905334237961";
-            const message = `Merhaba, adım ${name} TikTok Hizmeti satın almak istiyorum.\n\n` +
-                           `Paket Bilgisi: ${finalCount}\n` +
-                           `Fiyat: ${finalPrice}\n` +
-                           `TikTok Linki: ${tikTokLink}\n\n` +
-                           `Ödeme yapmak ve siparişi tamamlamak istiyorum.`;
-            
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
+            const message = `Merhaba, ismim ${name}.\n` +
+                `Spotify tanıtım hizmetinizle ilgileniyorum.\n\n` +
+                `Satın almak istediğim paket bilgileri:\n` +
+                `Paket Adı: ${finalCount}\n` +
+                `Fiyat: ${finalPrice}\n` +
+                `Bağlantı: ${tikTokLink}\n\n` +
+                `Ödeme işlemini tamamlamak ve siparişimi başlatmak istiyorum. Yardımcı olabilir misiniz?`;
+
+const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+window.open(whatsappUrl, '_blank');
+
             
             closeModalTikTok();
         }

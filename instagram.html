@@ -156,8 +156,8 @@ window.addEventListener('load', () => {
             
             <input type="text" id="tiktokName" placeholder="Adınız">
             
-            <label for="tikTokLink">TikTok Linkinizi Girin:</label>
-            <input type="text" id="tikTokLink" placeholder="TikTok linkinizi buraya yazın">
+            <label for="tikTokLink">Şarkı Linkinizi Girin:</label>
+            <input type="text" id="tikTokLink" placeholder="Şarkı linkinizi buraya yazın">
             
             <button onclick="submitLinkTikTok()">Gönder</button>
         </div>
@@ -277,14 +277,17 @@ window.addEventListener('load', () => {
             }
 
             const phoneNumber = "905334237961";
-            const message = `Merhaba, adım ${name} Instagram Hizmeti satın almak istiyorum.\n\n` +
-                           `Paket Bilgisi: ${finalCount}\n` +
-                           `Fiyat: ${finalPrice}\n` +
-                           `TikTok Linki: ${tikTokLink}\n\n` +
-                           `Ödeme yapmak ve siparişi tamamlamak istiyorum.`;
-            
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
+            const message = `Merhaba, ismim ${name}.\n` +
+                `Instagram tanıtım hizmetinizle ilgileniyorum.\n\n` +
+                `Satın almak istediğim paket bilgileri:\n` +
+                `Paket Adı: ${finalCount}\n` +
+                `Fiyat: ${finalPrice}\n` +
+                `Bağlantı: ${tikTokLink}\n\n` +
+                `Ödeme işlemini tamamlamak ve siparişimi başlatmak istiyorum. Yardımcı olabilir misiniz?`;
+
+const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+window.open(whatsappUrl, '_blank');
+
             
             closeModalTikTok();
         }
