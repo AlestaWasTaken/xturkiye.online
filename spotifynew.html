@@ -174,7 +174,7 @@
         <!-- menu -->
         
         <!-- curtain -->
-        <div class="mil-curtain"></div>
+        
         <!-- curtain end -->
 
         <!-- frame -->
@@ -213,41 +213,74 @@
                             <div class="col-lg-6 col-xl-5">
 
                                 <div class="mil-mb-90">
-    <h2 class="mil-up mil-mb-60"> Spotify Gerçek Organik Dinleyiciler ile<span class="mil-thin"> Büyü</span> </h2>
+   <style>
+  .youtube-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .youtube-logo {
+    height: 40px; /* Daha uygun boyut */
+    width: auto;
+  }
+  .header-text {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (max-width: 768px) {
+    .youtube-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .youtube-logo {
+      height: 35px;
+    }
+  }
+</style>
+
+<h2 class="mil-up mil-mb-60 youtube-header">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png" 
+       alt="YouTube Logo" 
+       class="youtube-logo">
+  <span class="header-text">
+    <span>Spotify <span class="mil-thin">Reklam / Tanıtım Hizmetleri</span></span>
+  </span>
+</h2>
     <ul class="mil-up mil-mb-30" style="list-style: none; padding-left: 0;">
     <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
         <span style="position: absolute; left: 0; color: #2ecc71;">✓</span>
-        <strong>Yüksek Erişimli Çalma Listeleri</strong><br>
+        <strong style="color: black;">Yüksek Erişimli Çalma Listeleri</strong><br>
         Şarkınız aktif dinleyicilere sahip özel listelere eklenerek gerçek kitleye ulaştırılır.
     </li>
     
     <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
         <span style="position: absolute; left: 0; color: #2ecc71;">✓</span>
-        <strong>%100 Türkiye Lokasyonu</strong><br>
+        <strong style="color: black;">%100 Türkiye Lokasyonu</strong><br>
         Yalnızca Türkiye'den gerçek kullanıcılara ulaşım sağlanır.
     </li>
     
     <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
         <span style="position: absolute; left: 0; color: #2ecc71;">✓</span>
-        <strong>Kalıcı Organik Etki</strong><br>
+        <strong style="color: black;">Kalıcı Organik Etki</strong><br>
         Kampanya bitse bile dinlenme ve yeni dinleyici kazanmaya devam edersiniz.
     </li>
     
     <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
         <span style="position: absolute; left: 0; color: #2ecc71;">✓</span>
-        <strong>Tamamen Doğal Yöntemler</strong><br>
+        <strong style="color: black;">Tamamen Doğal Yöntemler</strong><br>
         Kesinlikle bot veya sahte yazılım kullanılmaz, sadece organik yerleştirme.
     </li>
     
     <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
         <span style="position: absolute; left: 0; color: #2ecc71;">✓</span>
-        <strong>Profesyonel Listeleme</strong><br>
+        <strong style="color: black;">Profesyonel Listeleme</strong><br>
         Şarkınızın tarzına en uygun çalma listelerine özel olarak eklenir.
     </li>
     
     <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
         <span style="position: absolute; left: 0; color: #2ecc71;">✓</span>
-        <strong>Kişiye Özel Planlama</strong><br>
+        <strong style="color: black;">Kişiye Özel Planlama</strong><br>
         10.00-18.00 saatleri arasında WhatsApp'tan iletişime geçerek kampanyanızı oluşturabilirsiniz.
     </li>
 </ul>
@@ -297,7 +330,201 @@
                 </section>
                
                 
-                
+                <section class="mil-p-120-30">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mil-mb-90 text-center">
+                <h2 class="mil-up mil-mb-30">Spotify Referanslarımız</h2>
+                <p class="mil-up mil-mb-30">Müzik prodüksiyon çalışmalarımızdan örnekler</p>
+            </div>
+        </div>
+
+        <style>
+  .spotify-row {
+    --bs-gutter-x: 0.5rem; /* Yatay boşluk */
+    --bs-gutter-y: 0.5rem; /* Dikey boşluk */
+    margin: 0;
+  }
+  .spotify-col {
+    padding: 0.25rem !important; /* Kartlar arası boşluk */
+  }
+  .spotify-iframe {
+    border-radius: 8px;
+    min-height: 80px; /* Mobilde daha küçük */
+    height: 100%;
+    width: 100%;
+  }
+  @media (min-width: 576px) {
+    .spotify-iframe {
+      min-height: 200px; /* Tablet boyutu */
+    }
+  }
+  @media (min-width: 992px) {
+    .spotify-iframe {
+      min-height: 300px; /* Desktop boyutu */
+    }
+  }
+</style>
+
+<div class="row spotify-row">
+  <!-- Spotify Item 1 -->
+  <div class="col-6 col-md-4 col-lg-3 spotify-col">
+    <iframe class="spotify-iframe" src="https://open.spotify.com/embed/track/54frLmc88wYIbwxD8jZXkz?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+
+  <!-- Spotify Item 2 -->
+  <div class="col-6 col-md-4 col-lg-3 spotify-col">
+    <iframe class="spotify-iframe" src="https://open.spotify.com/embed/track/1Q8m1Pn7hvUuXn5IPuw8V5?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+
+  <!-- Spotify Item 3 -->
+  <div class="col-6 col-md-4 col-lg-3 spotify-col">
+    <iframe class="spotify-iframe" src="https://open.spotify.com/embed/track/73pJFAmt22fwncFyZGPpSS?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+
+  <!-- Spotify Item 4 -->
+  <div class="col-6 col-md-4 col-lg-3 spotify-col">
+    <iframe class="spotify-iframe" src="https://open.spotify.com/embed/track/0DzpX9ykvIpirq0rXcBmi3?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+
+  <!-- Spotify Item 5 -->
+  <div class="col-6 col-md-4 col-lg-3 spotify-col">
+    <iframe class="spotify-iframe" src="https://open.spotify.com/embed/track/6sGKjzG16iIl2G1qr9G5q2?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+
+  <!-- Spotify Item 6 -->
+  <div class="col-6 col-md-4 col-lg-3 spotify-col">
+    <iframe class="spotify-iframe" src="https://open.spotify.com/embed/track/01YZ6Nyd9QdP2ZT8U6NQzd?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+</div>
+
+<div class="col-6 col-md-4 col-lg-3 spotify-col">
+    <iframe class="spotify-iframe" src="https://open.spotify.com/embed/track/01YZ6Nyd9QdP2ZT8U6NQzd?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+</div>
+
+
+
+
+        <div class="row">
+            <div class="col-12 mil-up mil-mt-60 text-center">
+                <a href="https://open.spotify.com/playlist/3iNldGquV3jdmgpKG0IqNt?si=iCabrGLCTZqIGx8I7iZ6OQ&pi=h-S3_ZRrR-CmF" target="_blank" class="mil-button">
+                    <span style="
+    font-size: 0.8rem;
+    position: relative;
+    right: 0.6rem;
+">Tüm Çalışmalarımızı Spotify'da Dinleyin</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png" alt="Spotify" class="mil-button-spotify-logo" style="
+    position: relative;
+    right: 1rem;
+">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.mil-spotify-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mil-spotify-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.mil-spotify-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* Kare format */
+    height: 0;
+    overflow: hidden;
+}
+
+.mil-spotify-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mil-spotify-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mil-spotify-card:hover .mil-spotify-overlay {
+    opacity: 1;
+}
+
+.mil-spotify-logo {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+.mil-spotify-info {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.mil-spotify-info h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+}
+
+.mil-spotify-info p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.mil-button-spotify-logo {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .mil-spotify-card {
+        margin-bottom: 30px;
+    }
+
+    .mil-spotify-info h4 {
+        font-size: 16px;
+    }
+
+    .mil-spotify-info p {
+        font-size: 13px;
+    }
+    
+    .mil-spotify-logo {
+        width: 30px;
+        height: 30px;
+    }
+}
+</style>
 
 
 <section class="mil-p-120-30">
@@ -755,7 +982,7 @@
     <!-- swup js -->
     <script src="js/plugins/swup.min.js"></script>
     <!-- swiper js -->
-    <script src="js/plugins/swiper.min.js"></script>
+    
     <!-- fancybox js -->
     <script src="js/plugins/fancybox.min.js"></script>
     <!-- gsap js -->

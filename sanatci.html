@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/plugins/swiper.min.css">
     <link rel="stylesheet" href="css/plugins/fancybox.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -208,9 +209,218 @@
             });
         });
     </script>
-<style>
+
+    <style>
+    /* DUYURU BANNER STİLLERİ - YENİ TASARIM */
+    .announcement-bar {
+        position: relative;
+        background: rgb(0, 0, 0);
+        color: #e0e0e0;
+        padding: 12px 20px;
+        text-align: center;
+        z-index: 999;
+        margin: 0;
+        overflow: hidden;
+            box-shadow: 0 4px 15px #ff980045;
+    }
     
+    /* Yılan Animasyonlu Border */
+    .announcement-bar::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            transparent 49%,
+            #FF8C00 50%,
+            #FFA500 100%
+        );
+        background-size: 200% 100%;
+        animation: borderSnake 5s linear infinite;
+        z-index: -1;
+        padding: 2px;
+        border-radius: 0px;
+        -webkit-mask: 
+            linear-gradient(#fff 0 0) content-box, 
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+    
+    @keyframes borderSnake {
+        0% {
+            background-position: 200% 0;
+        }
+        100% {
+            background-position: -200% 0;
+        }
+    }
+    
+    .announcement-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .announcement-text {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .spotify-logo {
+        width: 22px;
+        height: 22px;
+        vertical-align: middle;
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+    
+    .announcement-link {
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+        padding: 8px 18px;
+        border-radius: 4px;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 165, 0, 0.3);
+        font-size: 14px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .announcement-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 165, 0, 0.2), transparent);
+        transition: 0.5s;
+    }
+    
+    .announcement-link:hover {
+        background: rgba(255, 165, 0, 0.15);
+        color: #fff;
+    }
+    
+    .announcement-link:hover::before {
+        left: 100%;
+    }
+    
+    .announcement-link i {
+        margin-right: 8px;
+        font-size: 14px;
+    }
+    
+    .close-announcement {
+        background: transparent;
+        border: none;
+        color: #aaa;
+        font-size: 18px;
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.3s;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+    
+    .close-announcement:hover {
+        color: #FF8C00;
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    @media (max-width: 768px) {
+        .announcement-bar {
+            padding: 12px 40px 12px 20px;
+        }
+        
+        .announcement-content {
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .announcement-text {
+            font-size: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .announcement-link {
+            padding: 7px 15px;
+            font-size: 13px;
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .close-announcement {
+            right: 10px;
+            top: 15px;
+            transform: none;
+        }
+    }
 </style>
+
+<!-- HEADER'DAN HEMEN SONRA EKLENECEK KISIM -->
+<div class="announcement-bar" id="announcementBar">
+    <div class="announcement-content">
+        <p class="announcement-text">
+            <svg class="spotify-logo" viewBox="0 0 24 24" fill="#1DB954">
+                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+            </svg>
+            <strong>Özel Spotify Listesinde Yer Al!</strong> Şarkınızı ekletmek için hemen iletişime geçin
+        </p>
+        <div style="display: flex; gap: 10px;">
+            <a href="https://open.spotify.com/playlist/3iNldGquV3jdmgpKG0IqNt?si=iCabrGLCTZqIGx8I7iZ6OQ&pi=h-S3_ZRrR-CmF" target="_blank" class="announcement-link">
+                <i class="fab fa-spotify"></i> Listeyi Gör
+            </a>
+           <a href="https://wa.me/905334237961" class="announcement-link" target="_blank">
+    <i class="fab fa-whatsapp"></i> +90 533 423 79 61
+</a>
+        </div>
+    </div>
+    <button class="close-announcement" id="closeAnnouncement">&times;</button>
+</div>
+
+<script>
+    // Banner'ı kapatma fonksiyonu
+    document.getElementById('closeAnnouncement').addEventListener('click', function() {
+        document.getElementById('announcementBar').style.display = 'none';
+        // Kullanıcı tercihini localStorage'a kaydet (30 günlük)
+        localStorage.setItem('announcementClosed', 'true');
+    });
+    
+    // Eğer kullanıcı daha önce kapatmışsa gösterme
+   
+</script>
+
    <div class="mil-wrapper" id="top">
     <div class="mil-content">
         <div id="swupMain" class="mil-main-transition">
