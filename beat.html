@@ -254,6 +254,53 @@
         width: 20px;
         height: 20px;
     }
+
+      .mil-studio-sample {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .mil-studio-image-container {
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+    }
+
+    .mil-studio-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.5s ease;
+    }
+
+    .mil-studio-image-container:hover {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .mil-studio-image-container:hover .mil-studio-image {
+        transform: scale(1.03);
+    }
+
+    .mil-studio-caption {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        letter-spacing: 0.5px;
+    }
+
+    /* Mobil Uyumluluk */
+    @media (max-width: 768px) {
+        .mil-studio-sample {
+            margin-top: 30px;
+        }
+        
+        .mil-studio-caption {
+            font-size: 16px;
+        }
+    }
+    
 </style>
 
                             <div class="col-lg-5">
@@ -262,6 +309,13 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="mil-studio-sample mil-up mil-mt-60">
+        <div class="mil-studio-image-container">
+            <img src="./img/WhatsApp Görsel 2025-05-23 saat 02.28.43_c7f2d615.jpg" alt="Stüdyomuzdan Bir Kare" class="mil-studio-image">
+        </div>
+        <div class="mil-studio-caption">Stüdyodan Bir Kare</div>
+    </div>
                 </section>
                
                 
