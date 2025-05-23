@@ -253,6 +253,54 @@ Enstrüman seçiminden yapı kurulumuna kadar tüm aşamalar, şarkınızın ruh
         width: 20px;
         height: 20px;
     }
+
+    /* Stüdyo Görseli Stilleri */
+    .mil-studio-sample {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .mil-studio-image-container {
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+    }
+
+    .mil-studio-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.5s ease;
+    }
+
+    .mil-studio-image-container:hover {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .mil-studio-image-container:hover .mil-studio-image {
+        transform: scale(1.03);
+    }
+
+    .mil-studio-caption {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        letter-spacing: 0.5px;
+    }
+
+    /* Mobil Uyumluluk */
+    @media (max-width: 768px) {
+        .mil-studio-sample {
+            margin-top: 30px;
+        }
+        
+        .mil-studio-caption {
+            font-size: 16px;
+        }
+    }
+    
 </style>
 
                             <div class="col-lg-5">
@@ -264,7 +312,13 @@ Enstrüman seçiminden yapı kurulumuna kadar tüm aşamalar, şarkınızın ruh
                 </section>
                
                 
-                
+                   <div class="mil-studio-sample mil-up mil-mt-60">
+        <div class="mil-studio-image-container">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a5d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Stüdyomuzdan Bir Kare" class="mil-studio-image">
+        </div>
+        <div class="mil-studio-caption">Stüdyodan Bir Kare</div>
+    </div>
+</div>
 
 
 <section class="mil-p-120-30">
